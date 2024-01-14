@@ -35,9 +35,9 @@ const AccordionTrigger = React.forwardRef<
       >
         {children}
         {isOpen ? (
-          <MinusIcon className="text-white  bg-black rounded-full h-6 w-6 p-1 stroke-w-4 shrink-0 transition-colors duration-200" />
+          <MinusIcon className="text-white  hover:bg-zinc-800/90 active:bg-zinc-900 bg-zinc-800 rounded-full h-6 w-6 p-1 stroke-w-4 shrink-0 transition-colors duration-200" />
         ) : (
-          <PlusIcon className="text-white  bg-purple-600 rounded-full h-6 w-6 p-1 stroke-w-4 shrink-0 transition-colors duration-200" />
+          <PlusIcon className="hover:bg-purple-600/90 active:bg-purple-700 text-white  bg-purple-600 rounded-full h-6 w-6 p-1 stroke-w-4 shrink-0 transition-colors duration-200" />
         )}
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
