@@ -15,7 +15,7 @@ import { FAQAccordion } from "./FAQAccordion";
 
 export default function FAQCard() {
   return (
-    <Card className="gap-6 bg-white lg:p-8 pb-2 lg:pb-4 rounded-lg shadow-md  w-[327px] h-min lg:w-[600px] -mt-[130px] lg:-mt-60">
+    <Card className="gap-6 bg-white lg:p-8 pb-2 lg:pb-4 rounded-lg shadow-md  w-[327px] h-min lg:w-[600px] mt-[200px]">
       <CardHeader className="text-2xl font-bold">
         <CardTitle className="flex gap-6 w-full">
           <Image className="w-6 h-6" src={sparkle} alt={"Sparkle Flourish"} />

@@ -8,7 +8,7 @@ import { BackgroundFlourish } from "../components/BackgroundFlourish";
 
 export default function Home() {
   return (
-    <main className="flex w-[100dvw] h-[100dvh] items-center justify-center border-slate-200">
+    <main className="flex w-[100dvw] h-[100dvh] justify-center border-slate-200">
       <BackgroundFlourish />
       <FAQCard />
     </main>
