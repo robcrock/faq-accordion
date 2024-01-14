@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import localFont from "@next/font/local";
 const workSans = localFont({
@@ -18,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={workSans.className}>{children}</body>
+      <body className={`${workSans.className} bg-[#e6d9f1] relative`}>
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,4 +1,8 @@
-export const content = [
+export type TItem = {
+  question: string;
+  answer: string;
+};
+export const content: TItem[] = [
   {
     question: "What is Frontend Mentor, and how will it help me?",
     answer:

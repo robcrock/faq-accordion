@@ -1,11 +1,7 @@
+"use client";
+
 import { content } from "@/config/contstants";
 import sparkle from "@/public/assets/images/icon-star.svg";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from "./ui/accordion";
 import {
   Card,
   CardHeader,
@@ -14,87 +10,29 @@ import {
   CardFooter,
 } from "./ui/card";
 import Image from "next/image";
+import { Attribution } from "./Attribution";
+import { FAQAccordion } from "./FAQAccordion";
 
 export default function FAQCard() {
   return (
-    <Card className="bg-white p-6 rounded-lg shadow-md w-[350px]">
+    <Card className="gap-6 bg-white lg:p-8 pb-2 lg:pb-4 rounded-lg shadow-md  w-[327px] lg:w-[600px] -mt-[130px] lg:-mt-60">
       <CardHeader className="text-2xl font-bold">
-        <CardTitle className="flex w-full">
+        <CardTitle className="flex gap-6 w-full">
           <Image className="w-6 h-6" src={sparkle} alt={"Sparkle Flourish"} />
           FAQs
         </CardTitle>
       </CardHeader>
       <CardContent>
-        {content.map((item, index) => (
-          <Accordion key={item.question} type="single" collapsible>
-            <AccordionItem value="item-1">
-              <AccordionTrigger>{item.question}</AccordionTrigger>
-              <AccordionContent>{item.answer}</AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        ))}
+        {content.map((item, index) => {
+          const isLast = content.length - 1 === index;
+          return (
+            <FAQAccordion key={item.question} item={item} isLast={isLast} />
+          );
+        })}
       </CardContent>
-      <CardFooter>
-        <p>Card Footer</p>
+      <CardFooter className="flex justify-center">
+        <Attribution />
       </CardFooter>
     </Card>
-  );
-}
-
-function CircleIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <circle cx="12" cy="12" r="10" />
-    </svg>
-  );
-}
-
-function MinusIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M5 12h14" />
-    </svg>
-  );
-}
-
-function PlusIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M5 12h14" />
-      <path d="M12 5v14" />
-    </svg>
   );
 }

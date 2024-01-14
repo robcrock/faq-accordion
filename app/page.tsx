@@ -1,4 +1,5 @@
 import FAQCard from "@/components/FAQCard";
+import { BackgroundFlourish } from "../components/BackgroundFlourish";
 
 /**
  * v0 by Vercel.
@@ -8,6 +9,7 @@ import FAQCard from "@/components/FAQCard";
 export default function Home() {
   return (
     <main className="flex w-[100dvw] h-[100dvh] items-center justify-center border-slate-200">
+      <BackgroundFlourish />
       <FAQCard />
     </main>
   );
