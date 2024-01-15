@@ -42,7 +42,6 @@ Users should be able to:
 - [Shadcn/ui](https://ui.shadcn.com/)
 - [NextJS](https://nextjs.org/)
 - [React](https://reactjs.org/)
-- [Next.js](https://nextjs.org/)
 
 ### What I learned
 
